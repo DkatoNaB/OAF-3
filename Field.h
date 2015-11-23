@@ -19,7 +19,7 @@ public:
 	};
 	
 	int fieldsTypeAsInt(Field::fields f) const noexcept;
-	const std::string& fieldsTypeAsSTR(Field::fields f) const;
+	friend std::ostream& operator<<(std::ostream&, Field::fields);
 	
 };
 

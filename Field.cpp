@@ -1,4 +1,4 @@
-#include <utility>
+#include <ostream>
 
 #include "Field.h"
 
@@ -13,21 +13,33 @@ int Field::fieldsTypeAsInt(Field::fields f) const noexcept
 	return static_cast<int>(f);
 }
 
-const std::string& fieldsTypeAsSTR(Field::fields f)
+std::ostream& operator<<(std::ostream& os, Field::fields f)
 {
 	switch(f)
 	{
 		case Field::fields::REALESTATE:
-			return std::forward<std::string>("realestate");
-			break;
+		{
+			os << "REALESTATE";
+			return os;
+			
+		}
 		case Field::fields::SERVICE:
-			return std::forward<std::string>"service";
-			break;
+		{	
+			os << "SERVICE";
+			return os;
+			
+		}
 		case Field::fields::LUCK:
-			return std::forward<std::string>"lucky";
-			break;
+		{
+			os << "LUCK";
+			return os;
+		}
+			
 		default:
-			return std::forward<std::string>"smt went wrong!";
+		{
+			os << "field::operator<<('WHOOPS')";
+			return os;
+		}
 	}
 	
 }
