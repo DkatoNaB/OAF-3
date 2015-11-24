@@ -1,4 +1,4 @@
-SRC = Field.cpp
+SRC = Field/LuckField.cpp
 SRC += main.cpp
 
 
