@@ -8,9 +8,15 @@ class Field
 {
 public:
 	Field() = delete;
+	~Field();
 	virtual ~Field() = 0;
-	void buy() = 0;
-	void build() = 0;
+	virtual void buy() = 0;
+	virtual void build() = 0;
+	virtual bool isStepped () = 0;
+
+protected:
+	std::string& owner;
+	int value;
 };
 
 #endif //FIELD_H
