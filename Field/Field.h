@@ -10,6 +10,7 @@ class Field
 public:
 	virtual ~Field() = default;
 	virtual void info() = 0;
+	//virtual int fieldNumber() = 0;
 	//virtual void buy() = 0;
 	//virtual void build() = 0;
 	//virtual void step() = 0;

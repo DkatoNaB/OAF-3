@@ -1,8 +1,13 @@
 SRC = Field/LuckField.cpp
 SRC += Field/ServiceField.cpp
+SRC += Field/RealEstateField.cpp
+#SRC += Player/GreedyPlayer.cpp
+#SRC += Player/GreedyPlayer.cpp
 SRC += main.cpp
 
-
+#dependencies
+DEP = Player/GreedyPlayer.h
+DEP += Field/Field.h
 
 # object list
 OBJS = $(SRC:.cpp=.o)
@@ -14,7 +19,7 @@ CXXFLAGS = -std=c++11 -Wall -Wextra
 
 #build
 all: $(OBJS) 
-	$(CXX) $(CXXFLAGS) Field/Field.h $(OBJS) Field/Field.h -o Capitaly
+	$(CXX) $(CXXFLAGS) $(DEP) $(OBJS) Field/Field.h -o Capitaly
 
 #build rules 
 %.o: %.cpp %.h

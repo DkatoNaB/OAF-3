@@ -24,6 +24,8 @@ void LuckField::info()
 {
 	std::cout <<"LuckField" << std::endl;
 }
+
+
 /*
 bool LuckField::isStepped() 
 {

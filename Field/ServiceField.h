@@ -10,6 +10,7 @@ public:
 	explicit ServiceField(int);
 	virtual ~ServiceField();
 	void info() override;
+	//int fieldNumber() override;
 private:
 	int _value;
 };

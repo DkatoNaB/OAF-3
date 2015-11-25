@@ -10,6 +10,7 @@ public:
 	explicit LuckField(int);
 	virtual ~LuckField();
 	void info() override;
+	//int fieldNumber() override;
 private:
 	int _value;
 };
