@@ -3,19 +3,24 @@
 
 #include <iostream>
 #include <string>
+#include <exception>
 
 class Field
 {
 public:
-	Field() = delete;
 	virtual ~Field() = default;
+	virtual void info() = 0;
 	//virtual void buy() = 0;
 	//virtual void build() = 0;
-	virtual bool isStepped() = 0;	
+	//virtual void step() = 0;
+	//virtual bool isStepped() = 0;	
+protected:
+	Field() = default;
 };
 
 #endif //FIELD_H
 
+//Field::number = 0;
 /*
 ....különféle mezők sorakoznak 
 egymás után.....

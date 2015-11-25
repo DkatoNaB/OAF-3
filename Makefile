@@ -1,5 +1,7 @@
 SRC = Field/LuckField.cpp
+SRC += Field/ServiceField.cpp
 SRC += main.cpp
+
 
 
 # object list
@@ -11,8 +13,8 @@ CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra
 
 #build
-all: $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o Capitaly
+all: $(OBJS) 
+	$(CXX) $(CXXFLAGS) Field/Field.h $(OBJS) Field/Field.h -o Capitaly
 
 #build rules 
 %.o: %.cpp %.h

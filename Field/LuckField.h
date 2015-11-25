@@ -7,11 +7,10 @@ class LuckField : public Field
 {
 public:
 	LuckField();
-	LuckField(std::string&,int);
+	explicit LuckField(int);
 	virtual ~LuckField();
-	bool isStepped();
+	void info() override;
 private:
-	std::string _owner;
 	int _value;
 };
 
